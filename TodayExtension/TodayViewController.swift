@@ -34,7 +34,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         lbl.topAnchor.constraint(equalTo: view.topAnchor, constant: 18).isActive = true
         lbl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -18).isActive = true
         
-        // view.translatesAutoresizingMaskIntoConstraints = false
+        view.translatesAutoresizingMaskIntoConstraints = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,8 +50,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         super.viewDidLayoutSubviews()
     }
     
-    func widgetActiveDisplayModeDidChange(activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
-        // This isnt getting called
+    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
         if activeDisplayMode == .expanded {
             preferredContentSize = CGSize(width: 0.0, height: 200.0)
         } else if activeDisplayMode == .compact {

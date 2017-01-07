@@ -369,6 +369,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SMQ3E8Y57T;
 				INFOPLIST_FILE = TodayExtensionSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.everlof.todayextensionsample.TodayExtensionSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -383,6 +384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SMQ3E8Y57T;
 				INFOPLIST_FILE = TodayExtensionSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.everlof.todayextensionsample.TodayExtensionSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -395,6 +397,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = SMQ3E8Y57T;
 				INFOPLIST_FILE = TodayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.everlof.todayextensionsample.TodayExtensionSample.TodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -408,6 +411,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = SMQ3E8Y57T;
 				INFOPLIST_FILE = TodayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.everlof.todayextensionsample.TodayExtensionSample.TodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
