@@ -15,6 +15,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        extensionContext?.widgetLargestAvailableDisplayMode = .expanded
         
         view.backgroundColor = .red
         
@@ -32,7 +34,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         lbl.topAnchor.constraint(equalTo: view.topAnchor, constant: 18).isActive = true
         lbl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -18).isActive = true
         
-        view.translatesAutoresizingMaskIntoConstraints = false
+        // view.translatesAutoresizingMaskIntoConstraints = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,6 +48,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+    }
+    
+    func widgetActiveDisplayModeDidChange(activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        // This isnt getting called
+        if activeDisplayMode == .expanded {
+            preferredContentSize = CGSize(width: 0.0, height: 200.0)
+        } else if activeDisplayMode == .compact {
+            preferredContentSize = maxSize
+        }
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
