@@ -14,7 +14,6 @@
 		C4F20D851E21455D00EAEFEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F20D831E21455D00EAEFEF /* LaunchScreen.storyboard */; };
 		C4F20D931E21457700EAEFEF /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F20D921E21457700EAEFEF /* NotificationCenter.framework */; };
 		C4F20D961E21457700EAEFEF /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F20D951E21457700EAEFEF /* TodayViewController.swift */; };
-		C4F20D991E21457700EAEFEF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F20D971E21457700EAEFEF /* MainInterface.storyboard */; };
 		C4F20D9D1E21457700EAEFEF /* TodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C4F20D901E21457700EAEFEF /* TodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 		C4F20D901E21457700EAEFEF /* TodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F20D921E21457700EAEFEF /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		C4F20D951E21457700EAEFEF /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		C4F20D981E21457700EAEFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		C4F20D9A1E21457700EAEFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				C4F20D951E21457700EAEFEF /* TodayViewController.swift */,
-				C4F20D971E21457700EAEFEF /* MainInterface.storyboard */,
 				C4F20D9A1E21457700EAEFEF /* Info.plist */,
 			);
 			path = TodayExtension;
@@ -221,7 +218,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4F20D991E21457700EAEFEF /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,14 +266,6 @@
 				C4F20D841E21455D00EAEFEF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		C4F20D971E21457700EAEFEF /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4F20D981E21457700EAEFEF /* Base */,
-			);
-			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -447,6 +435,7 @@
 				C4F20D8B1E21455D00EAEFEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4F20D9E1E21457700EAEFEF /* Build configuration list for PBXNativeTarget "TodayExtension" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +444,7 @@
 				C4F20DA01E21457700EAEFEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
