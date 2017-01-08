@@ -15,26 +15,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         extensionContext?.widgetLargestAvailableDisplayMode = .expanded
-        
         view.backgroundColor = .red
-        
         lbl.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae tempor nulla, in volutpat lectus. Sed quis orci sit amet velit cursus congue non accumsan turpis. Phasellus quis augue lobortis, pharetra arcu vitae, condimentum nunc. Nam rutrum massa ac feugiat eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non erat orci. Ut consequat faucibus sapien, et luctus magna posuere tempor."
         lbl.numberOfLines = 0
         lbl.backgroundColor = .blue
-        
-        view.addSubview(lbl)
-        
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        
-        lbl.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 18).isActive = true
-        lbl.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -18).isActive = true
-        
-        lbl.topAnchor.constraint(equalTo: view.topAnchor, constant: 18).isActive = true
-        lbl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -18).isActive = true
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,7 +29,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        lbl.preferredMaxLayoutWidth = 300
+        lbl.preferredMaxLayoutWidth = view.frame.width - (2 * 18)
     }
     
     override func viewDidLayoutSubviews() {
@@ -52,10 +38,24 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
         if activeDisplayMode == .expanded {
-            preferredContentSize = CGSize(width: 0.0, height: 200.0)
+            print("EXPANDED")
+            preferredContentSize = CGSize(width: 0.0, height: 0.0)
+            setupLabel()
         } else if activeDisplayMode == .compact {
+            print("COMPACT")
             preferredContentSize = maxSize
+            setupLabel()
         }
+    }
+    
+    func setupLabel() {
+        lbl.removeFromSuperview()
+        view.addSubview(lbl)
+        lbl.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 18).isActive = true
+        lbl.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -18).isActive = true
+        lbl.topAnchor.constraint(equalTo: view.topAnchor, constant: 18).isActive = true
+        lbl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -18).isActive = true
+        lbl.setContentCompressionResistancePriority(1000, for: .vertical)
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
